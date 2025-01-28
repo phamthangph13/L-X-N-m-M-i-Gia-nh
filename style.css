@@ -348,3 +348,31 @@ h1 {
 .envelope-flap {
     z-index: 3;
 }
+
+.snake {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.snake-segment {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, 
+        #ffd700,
+        #ff9500);
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ffd700;
+}
+
+@keyframes snakeGlow {
+    0%, 100% { 
+        filter: brightness(1) drop-shadow(0 0 5px #ffd700);
+    }
+    50% { 
+        filter: brightness(1.5) drop-shadow(0 0 10px #ffd700);
+    }
+}
